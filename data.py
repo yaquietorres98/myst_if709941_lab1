@@ -31,7 +31,7 @@ pd.set_option('display.expand_frame_repr', False)         # visualizar todas las
 abspath = path.abspath('files/NAFTRAC_holdings')
 # obtener una lista de todos los archivos en la carpeta (quitandole la extension de archivo)
 # no tener archivos abiertos al mismo tiempo que correr la siguiente linea, error por ".~loc.archivo"
-archivos = [f[:-4] for f in listdir(abspath) if isfile(join(abspath, f))]
+archivos = [f[8:-4] for f in listdir(abspath) if isfile(join(abspath, f))]
 archivos = sorted(archivos, key=lambda t: datetime.strptime(t[8:], '%d%m%y'))
 # --------------------------------------------------------------------------------------------- PASO 1.2 -- #
 # -- Leer todos los archivos y guardarlos en un diccionario
@@ -64,7 +64,7 @@ for i in archivos:
 # -- Construir el vector de fechas a partir del vector de nombres de archivos
 
 # estas serviran como etiquetas en dataframe y para yfinance
-#t_fechas = [i.strftime('%d-%m-%Y') for i in sorted([pd.to_datetime(i[8:]).date() for i in archivos])]
+t_fechas = [i.strftime('%d-%m-%Y') for i in sorted([pd.to_datetime(i[8:]).date() for i in archivos])]
 
 # lista con fechas ordenadas (para usarse como indexadores de archivos)
 i_fechas = [j.strftime('%d%m%y') for j in sorted([pd.to_datetime(i[8:]).date() for i in archivos])]
@@ -153,7 +153,7 @@ pos_datos['Ticker'] = pos_datos['Ticker'].replace('GFREGIOO.MX', 'RA.MX')
 # Desgloce ----------------------------------------------------------------------------------------------
 # Fecha en la que se busca hacer el match de precios
 match = 7
-var = precios.index.to_list()[match]
+precios.index.to_list()[match]
 
 # Precios necesarios para la posicion metodo 1
 #m1 = np.array(precios.iloc[match,[i in pos_datos['Ticker'].to_list() for i in precios.columns.to_list()]])

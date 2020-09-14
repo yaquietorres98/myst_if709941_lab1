@@ -1,6 +1,5 @@
 ## Description
-*Insert here a brief description of the project, including, purpose, technologies used and context 
-where it was created.*
+* Este laboratorio es sobre un caso bajo el siguiente supuesto: Tienes 1 Millón de pesos, tienes dos opciones para invertirlos. Por un lado, puedes hacer una Inversión Pasiva del capital, comprando el 100% del capital de títulos de un ETF que replica al mercado de renta variable mexicano S&P/BMV IPC que es el NAFTRAC. Pero por otro lado, puedes hacer una Inversión Activa del capital, al crear un portafolio que tenga los mismos activos que el ETF y haciendo el rebalanceo por medio de un algoritmo en específico.*
 
 ## Install dependencies
 
@@ -12,10 +11,10 @@ Or you can manually install one by one using the name and version in the file.
 
 ## Funcionalities
 
-*Add here examples of core functionalities for the project in this repository.*
+* Para la realización de estre trabajo fue necesario contar con una base historica de datos del NAFTRAC del 2018 al 2020 .*
 
 ## Author
-*Add Name and a brief description on who you are.*
+* Yaquie Guadalupe Contreras Torres estudiante de Ingeniería Financiera de noveno semestre. *
 
 ## License
 **GNU General Public License v3.0** 
@@ -26,4 +25,4 @@ works using a licensed work, under the same license. Copyright and license notic
 must be preserved. Contributors provide an express grant of patent rights.*
 
 ## Contact
-*For more information in reggards of this repo, please contact name@email.com*
+*Para más información contactarme en if709941@iteso.mx*
